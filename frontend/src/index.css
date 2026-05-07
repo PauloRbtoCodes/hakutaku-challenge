@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #faf7f2;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1a1a2e;
+}
+
+/* ── React Flow overrides ── */
+.react-flow__renderer,
+.react-flow__pane {
+  background: #f5f0e8;
+}
+
+.react-flow__edge-label {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.react-flow__attribution {
+  background: transparent !important;
+  color: #d6cfc4 !important;
+}
+
+.react-flow__controls button {
+  background: #ffffff !important;
+  border-color: #e8e2d9 !important;
+  color: #6b7280 !important;
+}
+.react-flow__controls button:hover {
+  background: #fff8f3 !important;
+  color: #ff791f !important;
+}
+
+.react-flow__minimap {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e8e2d9 !important;
+}
+
+/* ── Handle hover ── */
+.react-flow__handle {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.react-flow__node:hover .react-flow__handle {
+  opacity: 1;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d6cfc4; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #c4bdb2; }
+
+/* ── Animations ── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+.sage-float {
+  animation: float 3s ease-in-out infinite;
+}
