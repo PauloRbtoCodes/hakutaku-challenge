@@ -83,14 +83,11 @@ export function MainPage() {
           }}>
             <img src="/hakutaku-mark.svg" alt="Hakutaku" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
           </div>
-          <div>
-            <p style={{ margin: 0, fontSize: 15, fontWeight: 800, color: '#1A1A2E', letterSpacing: '-0.02em' }}>
-              Hakutaku
-            </p>
-            <p style={{ margin: 0, fontSize: 9, color: '#9CA3AF', fontWeight: 500, letterSpacing: '0.07em', textTransform: 'uppercase' }}>
-              Knowledge Graph
-            </p>
-          </div>
+          <img
+            src="/hakutaku-logo.svg"
+            alt="Hakutaku"
+            style={{ height: 36, width: 'auto', objectFit: 'contain', display: 'block' }}
+          />
         </div>
 
         {/* Actions */}
